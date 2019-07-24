@@ -31,6 +31,7 @@ public class ListSumSearch {
 				if(i != j) {
 					if(list[i] + list[j] == k) {
 						System.out.println("" + list[i] + " + " + list[j] + " = " + k);
+						list[i] = list[j];
 					}
 				}
 			}
