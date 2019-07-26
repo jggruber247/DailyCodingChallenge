@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /* ---------------------------------------------------------
  * James Garrett Gruber
  * Daily Coding Challenge
@@ -17,11 +19,18 @@
 public class ArrayOfProducts {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int[] example1 = {1,2,3,4,5};
+		int[] example2 = {3,2,1};
+		System.out.println("Example 1: " + Arrays.toString(example1));
+		int[] example1p = productArray(example1);
+		System.out.println("Example 1 Output: " + Arrays.toString(example1p));
+		
+		System.out.println("Example 2: " + Arrays.toString(example2));
+		int[] example2p = productArray(example2);
+		System.out.println("Example 2 Output: " + Arrays.toString(example2p));
 	}
 
-	public static int[] productArray(int[] arr, int i) {
+	public static int[] productArray(int[] arr) {
 		
 		int[] pArr = arr;
 		
