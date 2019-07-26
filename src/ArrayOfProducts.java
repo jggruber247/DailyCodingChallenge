@@ -24,7 +24,7 @@ public class ArrayOfProducts {
 		System.out.println("Example 1: " + Arrays.toString(example1));
 		int[] example1p = productArray(example1);
 		System.out.println("Example 1 Output: " + Arrays.toString(example1p));
-		
+		System.out.println("");
 		System.out.println("Example 2: " + Arrays.toString(example2));
 		int[] example2p = productArray(example2);
 		System.out.println("Example 2 Output: " + Arrays.toString(example2p));
@@ -32,18 +32,18 @@ public class ArrayOfProducts {
 
 	public static int[] productArray(int[] arr) {
 		
-		int[] pArr = arr;
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		int[] pArr;
+		pArr = arr.clone();
+		int len = pArr.length;
+		for(int i = 0; i < len; i++) {
+			int prod = 1;
+			for(int j = 0; j < len; j++) {
+				if(i != j) {
+					prod = prod * arr[j];
+				}
+			}
+			pArr[i] = prod;
+		}
 		return pArr;
 	}
-	
-	
 }
