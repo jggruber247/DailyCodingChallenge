@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /* ---------------------------------------------------------
  * James Garrett Gruber
  * Daily Coding Challenge
@@ -16,8 +18,28 @@
 public class MissingIntArray {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int[] example1 = {3,4,-1,1};
+		int[] example2 = {1,2,0};
+		System.out.println("Example 1: " + Arrays.toString(example1));
+		int missInt1 = missingIntFinder(example1);
+		System.out.println("Example 1 Output: " + missInt1);
+		System.out.println("");
+		System.out.println("Example 2: " + Arrays.toString(example2));
+		int missInt2 = missingIntFinder(example2);
+		System.out.println("Example 2 Output: " + missInt2);
 
 	}
 
+	
+	public static int missingIntFinder(int[] arr) {
+		int m = 0;
+		int[] pArr;
+		pArr = arr.clone();
+		int len = pArr.length;
+		for(int i = 0; i < len; i++) {
+		
+		}
+		return m;
+	}
+	
 }
