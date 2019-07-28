@@ -18,55 +18,49 @@ import java.util.Arrays;
 public class MissingIntArray {
 
 	public static void main(String[] args) {
-		//int[] example1 = {3,4,-1,1};
+		int[] example0 = {3,4,-1,1};
 		int[] example1 = {1,2,3,6,5,7,8};
 		int[] example2 = {1,2,0};
-		System.out.println("Example 1: " + Arrays.toString(example1));
-		int missInt1 = missingIntFinder(example1);
-		System.out.println("Example 1 Output: " + missInt1);
+		System.out.println("Example 0:  " + Arrays.toString(example0));
+		int missInt0 = missingIntFinder(example0);
+		System.out.println("Ex0 Output: " + missInt0);
 		System.out.println("");
-		System.out.println("Example 2: " + Arrays.toString(example2));
+		System.out.println("Example 1:  " + Arrays.toString(example1));
+		int missInt1 = missingIntFinder(example1);
+		System.out.println("Ex1 Output: " + missInt1);
+		System.out.println("");
+		System.out.println("Example 2:  " + Arrays.toString(example2));
 		int missInt2 = missingIntFinder(example2);
-		System.out.println("Example 2 Output: " + missInt2);
-
+		System.out.println("Ex2 Output: " + missInt2);
 	}
 
 	
 	public static int missingIntFinder(int[] arr) {
-		int m = 1;
-		boolean miss = false;
+		boolean exit = false;
+		boolean pass = false;
 		int[] pArr;
+		int cnt = 1;
+		int m = 1;
 		pArr = arr.clone();
 		int len = pArr.length;
-		int min = pArr[0];
-		int minT;
-		//while(m <= len) {
-		while(miss == false) {
-			for(int i = 1; i < len; i++) {
-				if(pArr[i] < 1) {
-					pArr[i] = len+2;
+		while(exit == false) {
+			pass = false;
+			for(int i=0;i<len;i++) {
+				if(pass == false) {
+					if(pArr[i]==cnt) {
+						pass = true;
+						m=pArr[i];
+					}
 				}
-				else if(pArr[i] < min){ 
-					minT = pArr[i];
-					pArr[i] = min;
-					min = minT;
-				} 
 			}
-			System.out.println("Array: " + Arrays.toString(pArr));
-			System.out.println("m: " + m);
-			System.out.println("min: " + min);
-			System.out.println(" ");
-			if(m == min) {
+			if(cnt > m) {
+				exit = true;
 				m++;
 			}
-			else if((m > min)) {
-				miss = true;
-			}
 			else {
-				miss = true;
+				cnt++;
 			}
 		}
 		return m;
 	}
-	
 }
