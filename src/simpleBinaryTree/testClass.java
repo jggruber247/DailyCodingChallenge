@@ -24,35 +24,41 @@
  * ---------------------------------------------------------
  */
 
-
 package simpleBinaryTree;
 
-//import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class testClass {
 	public static void main(String[] args)
 	{
+		// Creating the example binary tree in a very inefficient way
 		simpleLinkedBinaryTree<Integer> myBtree = new simpleLinkedBinaryTree<Integer>();
-		myBtree.addRoot(5);
-		Node<Integer> left=myBtree.addLeft(myBtree.root(), 2);
-		myBtree.addLeft(left, 8);
-		myBtree.addRight(left, 10);
+		myBtree.addRoot(0);
+		Node<Integer> A=myBtree.addLeft(myBtree.root(), 1);
+		Node<Integer> B=myBtree.addRight(myBtree.root(), 0);
+		Node<Integer> C=myBtree.addLeft(B, 1);
+		Node<Integer> D=myBtree.addRight(B, 0);
+		Node<Integer> E=myBtree.addLeft(C, 1);
+		Node<Integer> F=myBtree.addRight(C, 1);
 		
-		
-		
-		
-		/*
-		ArrayList<Node<Integer>> preorderList = myBtree.preorder();
-		for(Node<Integer> p: preorderList)
-		System.out.print(p.getElement()+"\t");
+		// Printing the top view
+		System.out.println("Top View:");
+		ArrayList<Node<Integer>> inOrderList = myBtree.inorder();
+		for(Node<Integer> p: inOrderList)
+			System.out.print(p.getElement()+"  ");
 		System.out.println();
-		System.out.println("Number of Node on the tree:\t"+myBtree.size(myBtree.root));
-		simpleLinkedBinaryTree<Integer> oBtree = myBtree;
-		System.out.println("Those two trees are identical:\t"+myBtree.isIdentical(myBtree.root, oBtree.root));
-		System.out.println("The parent node of "+ left.getElement() +"\t is" + myBtree.parent(myBtree.root, left));
-		ArrayList<Integer> ancestorlist = myBtree.ancestors(myBtree.root,left.getLeft(),ancestorlist);
-		for(Integer i: ancestorlist) System.out.print(i+"\t");
-		*/
+		System.out.println();	
+		
+		// Printing the tree view in a very inflexable way that only works for this tree.
+		System.out.println("Tree View:");
+		System.out.println("   " + myBtree.root().getElement());
+		System.out.println("  / \\");
+		System.out.println(" " + A.getElement() + "   " + B.getElement());
+		System.out.println("    / \\");
+		System.out.println("   " + C.getElement() + "   " + D.getElement());
+		System.out.println("  / \\");
+		System.out.println(" " + E.getElement() + "   " + F.getElement());
+		
 		
 	}
 
