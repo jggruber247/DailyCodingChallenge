@@ -18,11 +18,6 @@ public class MilesToKilos {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		// Programmer Information
-		System.out.println("Garrett Gruber, CSCI 1301, Section DA");
-		System.out.println("-------------------------------------"); 
-		System.out.println();
-		
 		// Input the mile value
 		System.out.println("How many miles would you like to convert?");
 		miles = sc.nextFloat();
@@ -35,4 +30,5 @@ public class MilesToKilos {
 		
 		sc.close();
 	}
+	
 }

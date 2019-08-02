@@ -18,9 +18,12 @@ import java.util.Arrays;
 public class MissingIntArray {
 
 	public static void main(String[] args) {
+		// Creating the example lists
 		int[] example0 = {3,4,-1,1};
 		int[] example1 = {1,2,3,6,5,7,8};
 		int[] example2 = {1,2,0};
+		
+		// Printing the examples and the outputs they equate to
 		System.out.println("Example 0:  " + Arrays.toString(example0));
 		int missInt0 = missingIntFinder(example0);
 		System.out.println("Ex0 Output: " + missInt0);

@@ -12,6 +12,7 @@
 import java.util.Scanner;
 
 public class ListSumSearch {
+	
 	public static void main(String[] args) {
 	
 		Scanner sc = new Scanner(System.in);
@@ -38,4 +39,5 @@ public class ListSumSearch {
 		}
 		sc.close();
 	}
+	
 }

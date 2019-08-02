@@ -58,8 +58,6 @@ public class testClass {
 		System.out.println("   " + C.getElement() + "   " + D.getElement());
 		System.out.println("  / \\");
 		System.out.println(" " + E.getElement() + "   " + F.getElement());
-		
-		
 	}
 
 }

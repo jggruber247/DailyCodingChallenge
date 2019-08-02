@@ -19,8 +19,11 @@ import java.util.Arrays;
 public class ArrayOfProducts {
 
 	public static void main(String[] args) {
+		// Creating the example lists
 		int[] example1 = {1,2,3,4,5};
 		int[] example2 = {3,2,1};
+		
+		// Printing the examples and the outputs they equate to
 		System.out.println("Example 1: " + Arrays.toString(example1));
 		int[] example1p = productArray(example1);
 		System.out.println("Example 1 Output: " + Arrays.toString(example1p));
@@ -30,8 +33,8 @@ public class ArrayOfProducts {
 		System.out.println("Example 2 Output: " + Arrays.toString(example2p));
 	}
 
+	// Method for returning the array described in the problem
 	public static int[] productArray(int[] arr) {
-		
 		int[] pArr;
 		pArr = arr.clone();
 		int len = pArr.length;
