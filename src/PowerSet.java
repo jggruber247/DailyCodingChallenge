@@ -30,9 +30,19 @@ public class PowerSet {
 		
 	}
 
+	//method for generating the power set using bitwise operations
 	public static void powerSetGen(int[] arr) {
 		int len = arr.length;
-		int powLen = len^2;
+		int powLen = 2^len;
+		for (int i=0; i<powLen; i++) {
+			System.out.print("{ ");
+			int b = 1;
+			for (int j=0; j<len; j++) {
+				
+			}
+			System.out.println("}");
+		}
+		System.out.println("Number of sets in power set: " + powLen);
 	}
 
 }
