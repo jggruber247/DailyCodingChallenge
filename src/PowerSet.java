@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /* ---------------------------------------------------------
  * James Garrett Gruber
  * Daily Coding Challenge
@@ -13,8 +15,24 @@
 public class PowerSet {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// Creating the example lists
+		int[] example1 = {1,2,3};
+		int[] example2 = {1,2,3,4};
+		
+		// Printing the examples and the outputs they equate to
+		System.out.println("Example 1:  \n" + Arrays.toString(example1));
+		int[] powerSet1 = powerSetGen(example1);
+		System.out.println("Example 1 Power Set:   \n" + Arrays.toString(powerSet1));
+		System.out.println(" ");
+		System.out.println("Example 2:  \n" + Arrays.toString(example2));
+		int[] powerSet2 = powerSetGen(example2);
+		System.out.println("Example 2 Power Set:   \n" + Arrays.toString(powerSet2));
+		
+	}
 
+	public static int[] powerSetGen(int[] arr) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
