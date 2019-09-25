@@ -38,7 +38,9 @@ public class PowerSet {
 			System.out.print("{ ");
 			int b = 1;
 			for (int j=0; j<len; j++) {
-				
+				if ((i & b) > 0) {
+					System.out.print("" + arr[j] + " ");
+				}
 			}
 			System.out.println("}");
 		}
