@@ -21,18 +21,18 @@ public class PowerSet {
 		
 		// Printing the examples and the outputs they equate to
 		System.out.println("Example 1:  \n" + Arrays.toString(example1));
-		int[] powerSet1 = powerSetGen(example1);
-		System.out.println("Example 1 Power Set:   \n" + Arrays.toString(powerSet1));
+		System.out.println("Example 1 Power Set:");
+		powerSetGen(example1);
 		System.out.println(" ");
 		System.out.println("Example 2:  \n" + Arrays.toString(example2));
-		int[] powerSet2 = powerSetGen(example2);
-		System.out.println("Example 2 Power Set:   \n" + Arrays.toString(powerSet2));
+		System.out.println("Example 2 Power Set:");
+		powerSetGen(example2);
 		
 	}
 
-	public static int[] powerSetGen(int[] arr) {
-		// TODO Auto-generated method stub
-		return null;
+	public static void powerSetGen(int[] arr) {
+		int len = arr.length;
+		int powLen = len^2;
 	}
 
 }
