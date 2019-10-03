@@ -21,16 +21,25 @@ public class LargestProduct {
 		
 		// Printing the examples and the outputs they equate to
 		System.out.println("Example 1:  \n" + Arrays.toString(example1));
-		System.out.println("Example 1 Solution:");
 		largestProductFinder(example1);
 		System.out.println(" ");
 		System.out.println("Example 2:  \n" + Arrays.toString(example2));
-		System.out.println("Example 2 Power Set:");
 		largestProductFinder(example2);
 		System.out.println(" ");
 	}
 	
+	// 
 	public static void largestProductFinder(int[] list) {
+		int fOne = 0;
+		int fTwo = 0; 
+		int fThree = 0;
+		int result = 0;
+		
+		
+		
+		
+		System.out.println("Largest Product: " + result);
+		System.out.println("Factors: " + fOne + ", " + fTwo + ", " + fThree);
 		
 	}
 	
