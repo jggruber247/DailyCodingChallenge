@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /* ---------------------------------------------------------
  * James Garrett Gruber
  * Daily Coding Challenge
@@ -11,5 +13,25 @@
  * ---------------------------------------------------------
  */
 public class LargestProduct {
-
+ 
+	public static void main(String[]args) {
+		// Creating the example lists
+		int[] example1 = {-10,-10,5,2};
+		int[] example2 = {1,2,3,4};
+		
+		// Printing the examples and the outputs they equate to
+		System.out.println("Example 1:  \n" + Arrays.toString(example1));
+		System.out.println("Example 1 Solution:");
+		largestProductFinder(example1);
+		System.out.println(" ");
+		System.out.println("Example 2:  \n" + Arrays.toString(example2));
+		System.out.println("Example 2 Power Set:");
+		largestProductFinder(example2);
+		System.out.println(" ");
+	}
+	
+	public static void largestProductFinder(int[] list) {
+		
+	}
+	
 }
