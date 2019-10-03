@@ -16,8 +16,8 @@ public class DistinctCharSubString {
 		// Creating examples
 		String ex1 = "abcba";
 		int ex1k = 2;
-		String ex2 = "abcdcba";
-		int ex2k = 3;
+		String ex2 = "abcdcbag";
+		int ex2k = 4;
 		
 		// Printing the examples and the outputs they equate to
 		System.out.println("Example String 1: \"" + ex1 + "\"");
@@ -37,15 +37,46 @@ public class DistinctCharSubString {
 		
 	}
 
+	// Finding the longest substring 
 	public static String longestString(String s, int k) {
 		String ls = "";
-		
-		
-		
-		
-
-		return ls;
+		String res = "";
+		int n = s.length();
+		int cnt = 0;
+		int ind = 0;
+		int prev = 0;
+		for (int i=0; i < n; i++)
+		{
+			char ch = s.charAt(i);
+			String ss = Character.toString(ch);
+			if (!ls.contains(ss))
+			{
+                cnt++;		
+				prev = ind;
+				ind = i;
+                          }
+			if (cnt <= k) {
+				ls = ls + ch;
+			}
+			else if (cnt == n) {
+				res = s;
+				return res;
+			}
+			else
+			{
+				if (res.length() < ls.length()) {
+					res=ls;	
+				}
+				i = prev-1;
+				ls = "";
+				cnt = 0;
+			}
+		}
+		if (res.length()==0) {
+			return s;
+		}
+		else {
+			return res;
+		}
 	}
-	
-	
 }
